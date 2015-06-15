@@ -26,8 +26,6 @@ class FaHelperTest extends CakeTestCase {
 		$result = $this->Fa->link('test', 'Proceed', array('controller' => 'foo', 'action' => 'bar'), array('before' => true));
 		$expected = '<a href="/foo/bar"><i class="fa fa-test"></i> Proceed</a>';
 		$this->assertEquals($expected, $result);
-
-		return;
 	}
 
 }
