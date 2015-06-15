@@ -14,8 +14,13 @@ class FaHelperTest extends CakeTestCase {
 	}
 
 	public function testLink() {
-		$result = $this->Fa->link('angle-double-right', 'Proceed', array('controller' => 'foo', 'action' => 'bar'));
-		$expected = '<a href="/foo/bar">Proceed <i class="fa fa-angle-double-right"></i></a>';
+		$result = $this->Fa->link('test', 'Proceed', array('controller' => 'foo', 'action' => 'bar'));
+		$expected = '<a href="/foo/bar">Proceed <i class="fa fa-test"></i></a>';
+		$this->assertEquals($expected, $result);
+
+		// Test link text gets escaped correctly.
+		$result = $this->Fa->link('test', '>', array('controller' => 'foo', 'action' => 'bar'));
+		$expected = '<a href="/foo/bar">&gt; <i class="fa fa-test"></i></a>';
 		$this->assertEquals($expected, $result);
 
 		return;
