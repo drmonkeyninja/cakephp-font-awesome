@@ -1,6 +1,8 @@
 CakePHP FontAwesome
 ===================
 
+[![License](https://poser.pugx.org/drmonkeyninja/cakephp-font-awesome/license)](https://packagist.org/packages/drmonkeyninja/cakephp-font-awesome)
+
 This plugin provides a simple helper for creating links containing markup for Font Awesome icons with properly escaped link text. You will need to install Font Awesome separately.
 
 
