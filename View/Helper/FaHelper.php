@@ -31,8 +31,13 @@ class FaHelper extends AppHelper {
 			$title = htmlentities($title, ENT_QUOTES, $escapeTitle);
 		}
 
-		// Append the Font Awesome icon.
-		$title .= ' <i class="fa fa-' . $icon . '"></i>';
+		// Append/Prepend the Font Awesome icon.
+		if (empty($options['before'])) {
+			$title .= ' <i class="fa fa-' . $icon . '"></i>';
+		} else {
+			$title = '<i class="fa fa-' . $icon . '"></i> ' . $title;
+		}
+		unset($options['before']);
 
 		$options['escape'] = false;
 
