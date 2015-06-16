@@ -32,7 +32,9 @@ class FaHelper extends AppHelper {
 		}
 
 		// Append/Prepend the Font Awesome icon.
-		if (empty($options['before'])) {
+		if (empty($title)) {
+			$title = '<i class="fa fa-' . $icon . '"></i>';
+		} elseif (empty($options['before'])) {
 			$title .= ' <i class="fa fa-' . $icon . '"></i>';
 		} else {
 			$title = '<i class="fa fa-' . $icon . '"></i> ' . $title;
