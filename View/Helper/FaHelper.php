@@ -31,13 +31,16 @@ class FaHelper extends AppHelper {
 			$title = htmlentities($title, ENT_QUOTES, $escapeTitle);
 		}
 
+		// Determine whether to include a space between the icon and title.
+		$space = isset($options['space']) && $options['space'] === false ? '' : ' ';
+
 		// Append/Prepend the Font Awesome icon.
 		if (empty($title)) {
 			$title = '<i class="fa fa-' . $icon . '"></i>';
 		} elseif (empty($options['before'])) {
-			$title .= ' <i class="fa fa-' . $icon . '"></i>';
+			$title .= $space . '<i class="fa fa-' . $icon . '"></i>';
 		} else {
-			$title = '<i class="fa fa-' . $icon . '"></i> ' . $title;
+			$title = '<i class="fa fa-' . $icon . '"></i>' . $space . $title;
 		}
 		unset($options['before']);
 
