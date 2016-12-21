@@ -29,4 +29,4 @@ Then add the following line to your bootstrap.php to load the plugin.
 Usage
 -----
 
-    echo $this->Fa->('chevron-circle-right', __('Proceed'), ['controller' => 'pages', 'display', 'next']);
+    echo $this->Fa->link('chevron-circle-right', __('Proceed'), ['controller' => 'pages', 'display', 'next']);
