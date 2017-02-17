@@ -7,7 +7,7 @@ use Cake\View\Helper;
 class FaHelper extends Helper
 {
 
-    public $helpers = array('Html');
+    public $helpers = ['Html'];
 
     /**
      * Create link containing a Font Awesome icon.
@@ -19,7 +19,7 @@ class FaHelper extends Helper
      * @param string $confirmMessage JavaScript confirmation message.
      * @return string An `<a />` element.
      */
-    public function link($icon, $title, $url = null, $options = array(), $confirmMessage = false)
+    public function link($icon, $title, $url = null, $options = [], $confirmMessage = false)
     {
         $escapeTitle = true;
         if (isset($options['escapeTitle'])) {
