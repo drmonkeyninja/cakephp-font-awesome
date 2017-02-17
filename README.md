@@ -11,6 +11,8 @@ Requirements
 
 * CakePHP 3.x
 
+Use the 2.x version for CakePHP 2.
+
 
 Installation
 ------------
