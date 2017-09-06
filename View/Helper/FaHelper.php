@@ -38,9 +38,9 @@ class FaHelper extends AppHelper {
 		if (empty($title)) {
 			$title = '<i class="fa fa-' . $icon . '"></i>';
 		} elseif (empty($options['before'])) {
-			$title .= $space . '<i class="fa fa-' . $icon . '"></i>';
+			$title .= $space . '<i class="fa fa-' . $icon . '" aria-hidden="true"></i>';
 		} else {
-			$title = '<i class="fa fa-' . $icon . '"></i>' . $space . $title;
+			$title = '<i class="fa fa-' . $icon . '" aria-hidden="true"></i>' . $space . $title;
 		}
 		unset($options['before']);
 
