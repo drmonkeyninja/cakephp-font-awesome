@@ -21,16 +21,16 @@ class FaHelperTest extends TestCase
     public function testLink()
     {
         $result = $this->Fa->link('test', 'Proceed', '/foo/bar');
-        $expected = '<a href="/foo/bar">Proceed <i class="fa fa-test"></i></a>';
+        $expected = '<a href="/foo/bar">Proceed <i class="fa fa-test" aria-hidden="true"></i></a>';
         $this->assertEquals($expected, $result);
 
         // Test link text gets escaped correctly.
         $result = $this->Fa->link('test', '>', '/foo/bar');
-        $expected = '<a href="/foo/bar">&gt; <i class="fa fa-test"></i></a>';
+        $expected = '<a href="/foo/bar">&gt; <i class="fa fa-test" aria-hidden="true"></i></a>';
         $this->assertEquals($expected, $result);
 
         $result = $this->Fa->link('test', 'Proceed', '/foo/bar', ['before' => true]);
-        $expected = '<a href="/foo/bar"><i class="fa fa-test"></i> Proceed</a>';
+        $expected = '<a href="/foo/bar"><i class="fa fa-test" aria-hidden="true"></i> Proceed</a>';
         $this->assertEquals($expected, $result);
 
         $result = $this->Fa->link('test', null, '/foo/bar', ['before' => true]);

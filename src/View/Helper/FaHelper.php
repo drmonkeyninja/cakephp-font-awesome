@@ -39,9 +39,9 @@ class FaHelper extends Helper
         if (empty($title)) {
             $title = '<i class="fa fa-' . $icon . '"></i>';
         } elseif (empty($options['before'])) {
-            $title .= ' <i class="fa fa-' . $icon . '"></i>';
+            $title .= ' <i class="fa fa-' . $icon . '" aria-hidden="true"></i>';
         } else {
-            $title = '<i class="fa fa-' . $icon . '"></i> ' . $title;
+            $title = '<i class="fa fa-' . $icon . '" aria-hidden="true"></i> ' . $title;
         }
         unset($options['before']);
 
