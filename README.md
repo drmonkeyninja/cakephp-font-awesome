@@ -38,4 +38,4 @@ Usage
 
 To render a link containing the markup for the `fa-chevron-circle-right` icon at the end you can do:-
 
-    <?= $this->Fa->('chevron-circle-right', __('Proceed'), ['controller' => 'pages', 'display', 'next']) ?>
+    <?= $this->Fa->link('chevron-circle-right', __('Proceed'), ['controller' => 'pages', 'display', 'next']) ?>
