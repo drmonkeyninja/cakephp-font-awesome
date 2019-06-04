@@ -39,3 +39,7 @@ Usage
 To render a link containing the markup for the `fa-chevron-circle-right` icon at the end you can do:-
 
     <?= $this->Fa->link('chevron-circle-right', __('Proceed'), ['controller' => 'pages', 'display', 'next']) ?>
+    
+If you want the icon to appear before the text you can use the `before` option:-
+
+    <?= $this->Fa->link('chevron-circle-right', __('Proceed'), ['controller' => 'pages', 'display', 'next'], ['before' => true]) ?>
